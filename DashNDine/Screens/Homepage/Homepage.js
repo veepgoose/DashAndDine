@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput,image, Button, StyleSheet } from 'react-native';
+import Logo from '../../assets/logo.png';
 
 
 function Homepage() {
@@ -8,7 +9,8 @@ function Homepage() {
     return (
       <View style={styles.container}>
         {/* Your login form and UI elements */}
-        <p style={{color:'#C6F91F'}}>Hello World!...again</p>
+        <Text style={styles.text}>Hello World!...again</Text>
+        <Image source={Logo} style={styles.logo} />
       </View>
     );
   }
@@ -20,7 +22,15 @@ function Homepage() {
       justifyContent: 'center',
       alignItems: 'center',
     },
-    // Define your styles here
+    text: {
+      color: '#C6F91F',
+      fontSize: 20,
+
+    },
+    logo: {
+      width: 200,
+      height: 200,
+    },
   });
   
 
