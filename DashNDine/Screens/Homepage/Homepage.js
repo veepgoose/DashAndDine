@@ -8,7 +8,7 @@ function Homepage() {
     return (
       <View style={styles.container}>
         {/* Your login form and UI elements */}
-        <p style={{color: 'red'}}>Hello World!...again</p>
+        <p style={{color:'#C6F91F'}}>Hello World!...again</p>
       </View>
     );
   }
