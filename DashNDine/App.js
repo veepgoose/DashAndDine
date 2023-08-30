@@ -1,4 +1,3 @@
-
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Homepage from './Screens/Homepage/Homepage';
@@ -6,7 +5,7 @@ import Homepage from './Screens/Homepage/Homepage';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Dash 'N' Dine! A Goose Squad Production </Text>
+      {/* <Text>Welcome to Dash 'N' Dine! </Text> */}
       <StatusBar style="auto" />
       <Homepage />
     </View>
@@ -16,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#5D5E60',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
