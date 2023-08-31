@@ -9,6 +9,18 @@ import { TouchableOpacity } from 'react-native-web';
 function Homepage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+
+    if (username === 'Goose' && password === 'Tom') {
+      setIsLoggedIn(true);
+      console.log('Logged in!');
+    } else {
+      setIsLoggedIn(false);
+      console.log('No entry for you!');
+    }
+  };
  
     return (
       <View style={styles.container}>
@@ -32,16 +44,13 @@ function Homepage() {
           value={password}
         />
 
-        <TouchableOpacity
-        style={styles.button}
-         onPress={() => {
-            console.log('Username;', username);
-            console.log('Password:', password);   
-
-         }}
-        >
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
         ,<Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
+
+        {isLoggedIn && <Text style={styles.loginMessage}>You are logged in!</Text>}
+
+ 
          
           
                 
@@ -96,15 +105,13 @@ function Homepage() {
       shadowOpacity: 0.9,
       shadowRadius: 3.84,
       
+    },
 
-      
-      
-      
-      
-      
-
-      
-
+    container: {
+      flex: 1,
+      backgroundColor: '#5D5E60',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
 
   
