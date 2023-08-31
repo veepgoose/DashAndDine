@@ -20,3 +20,5 @@ The climax arrives on Sunday, the end of your fitness and culinary journey. The 
 - Enjoy the satisfaction of a well-earned, home-cooked meal.
 
 Ready to embrace a new kind of fitness challenge—one that fills your heart and your plate? Join us on Dash & Dine and turn your love into a delicious rivalry.
+
+![Wireframes](Wireframes.jpg)
