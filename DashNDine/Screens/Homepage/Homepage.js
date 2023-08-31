@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput,Image, Button, StyleSheet, Touchable } from 'react-native';
 import Logo from '../../assets/logo.png';
 import { TouchableOpacity } from 'react-native-web';
@@ -10,12 +11,15 @@ function Homepage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigation = useNavigation();
 
   const handleLogin = () => {
 
     if (username === 'Goose' && password === 'Tom') {
       setIsLoggedIn(true);
       console.log('Logged in!');
+
+      navigation.navigate('Dashboard');
     } else {
       setIsLoggedIn(false);
       console.log('No entry for you!');
