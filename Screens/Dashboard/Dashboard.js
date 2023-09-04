@@ -10,14 +10,16 @@ import {
 } from "react-native";
 import Goose from "/Images/Goose.jpg";
 import { TouchableOpacity } from "react-native-web";
-import ProfilePic from "/Images/Goose.jpg";
 
 function Dashboard() {
+  //additional code from Tom
+  const { progress, setProgress } = useState(0);
+  // end
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Goose Squad</Text>
+
       <Image source={Goose} style={styles.logo} />
-      <Image source={ProfilePic} style={styles.profilePic} />
     </View>
   );
 }
