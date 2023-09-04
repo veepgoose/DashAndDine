@@ -1,25 +1,24 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  Image,
-  Button,
-  StyleSheet,
-  Touchable,
-} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Goose from "/Images/Goose.jpg";
-import { TouchableOpacity } from "react-native-web";
+import { useNavigation } from "@react-navigation/native";
 
 function Dashboard() {
-  //additional code from Tom
-  const { progress, setProgress } = useState(0);
-  // end
+  const [progress, setProgress] = useState(0);
+  const navigation = useNavigation();
+
+  const navigateAddWorkout = () => {
+    navigation.navigate("AddWorkout");
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Goose Squad</Text>
 
       <Image source={Goose} style={styles.logo} />
+
+      <TouchableOpacity style={styles.Button} onPress={navigateAddWorkout}>
+        <Text style={styles.ButtonText}>Add Workout!</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -74,6 +73,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#5D5E60",
     alignItems: "center",
     justifyContent: "center",
+  },
+  Button: {
+    backgroundColor: "#4DD8FF",
+    padding: 10,
+    marginTop: 20,
+    borderRadius: 5,
+  },
+  ButtonText: {
+    color: "#36413E",
+    fontWeight: "bold",
   },
 });
 
